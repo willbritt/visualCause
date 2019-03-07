@@ -12,8 +12,8 @@ function(err)
 
 var drawChart = function(data)
 {
-  var width = 400;
-  var height = 200;
+  var width = 600;
+  var height = 300;
   var barWidth = width/data.length;
   var svg = d3.select("svg")
               .attr("height", height)

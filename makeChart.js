@@ -82,7 +82,7 @@ svg.selectAll("text")
    .attr("x", function(d,i)
       { return 45})
    .attr("y", function(d, i)
-      { return (i+1)*15+20;})
+      { return (i+1)*15+32;})
    .attr("fill", "black")
       
 }

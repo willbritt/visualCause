@@ -10,7 +10,7 @@ function(err)
   console.log(err);
 });
 
-var drawChart = function(Data)
+var drawChart = function(data)
 {
   var width = 400;
   var height = 200;

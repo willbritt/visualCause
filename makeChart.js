@@ -47,16 +47,40 @@ var drawChart = function(data)
       {return "white";})
    .attr("font-weight", "bold")
   
-  svg.append("text")
+//********
+  
+  var drawLegend = function(data)
+{
+  var width = 200;
+  var height = 200;
+  var boxWidth = 15;
+  var svg = d3.select(data)
+              .attr("height", height)
+              .attr("width", width);
+  svg.selectAll("rect")
+     .data(data)
+     .enter()
+     .append("rect")
+     .attr("x", function(d,i)
+      { return 25;})
+    .attr("y", function (d, i)
+      { return (i+1)*15 + 10;})
+    .attr("width", boxWidth)
+    .attr("height", boxWidth-3)
+    .attr("fill", function(d)
+      { return d.color;})
+
+svg.selectAll("text")
+   .data(data)
+   .enter()
+   .append("text")
    .text(function(d)
       { return d.Team;})
    .attr("x", function(d,i)
-      { return (i * barWidth) + 20;})
-   .attr("y", function(d)
-      { return (height - (d.W*10)+20) / 2;})
-   .attr("fill", function(d) 
-      {return "white";})
-   .attr("font-weight", "bold")
+      { return 45})
+   .attr("y", function(d, i)
+      { return (i+1)*15 + 22;})
+   .attr("fill", "black")
       
 }
       

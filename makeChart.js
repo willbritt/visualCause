@@ -56,9 +56,9 @@ var drawChart = function(data)
    .attr("x", function(d,i)
       { return (i * barWidth) + 20;})
    .attr("y", function(d)
-      { return height - (d.Team*10)+20;})
+      { return (height - (d.W*10)+20) / 2;})
    .attr("fill", function(d) 
-      {return "black";})
+      {return "white";})
    .attr("font-weight", "bold")
       
 }

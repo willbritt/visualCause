@@ -3,7 +3,8 @@ var dataP = d3.csv("wc_standings.csv");
 dataP.then(function(data)
 {
   console.log("data",data);
-  drawChart(data, "#CSV"); 
+  drawChart(data, "#CSV")
+  drawLegend(data, "#CSV"); 
 },
 function(err)
 {
@@ -46,6 +47,8 @@ var drawChart = function(data)
    .attr("fill", function(d) 
       {return "white";})
    .attr("font-weight", "bold")
+  
+}
   
 //********
   

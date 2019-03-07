@@ -11,12 +11,12 @@ function(err)
   console.log(err);
 });
 
-var drawChart = function(data)
+var drawChart = function(data, idName)
 {
   var width = 1000;
   var height = 500;
   var barWidth = width/data.length;
-  var svg = d3.select("svg")
+  var svg = d3.select(idName)
               .attr("height", height)
               .attr("width", width);
   
@@ -52,12 +52,12 @@ var drawChart = function(data)
   
 //********
   
-  var drawLegend = function(data)
+  var drawLegend = function(data, idName)
 {
   var width = 200;
   var height = 200;
   var boxWidth = 15;
-  var svg = d3.select(data)
+  var svg = d3.select(idName)
               .attr("height", height)
               .attr("width", width);
   svg.selectAll("rect")

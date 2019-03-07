@@ -45,6 +45,20 @@ var drawChart = function(data)
    .attr("fill", function(d) 
       {return "white";})
    .attr("font-weight", "bold")
+  
+   svg.selectAll("text")
+   .data(data)
+   .enter()
+   .append("text")
+   .text(function(d)
+      { return d.Team;})
+   .attr("x", function(d,i)
+      { return (i * barWidth) + 20;})
+   .attr("y", function(d)
+      { return d.W*10;})
+   .attr("fill", function(d) 
+      {return "black";})
+   .attr("font-weight", "bold")
       
 }
       

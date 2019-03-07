@@ -69,7 +69,7 @@ var drawChart = function(data, idName)
     .attr("y", function (d, i)
       { return (i+1)*15 + 10;})
     .attr("width", boxWidth)
-    .attr("height", boxWidth-3)
+    .attr("height", (i+1)*50 + 22)
     .attr("fill", function(d)
       { return d.Color;})
 
@@ -82,7 +82,7 @@ svg.selectAll("text")
    .attr("x", function(d,i)
       { return 45})
    .attr("y", function(d, i)
-      { return (i+1)*25 + 22;})
+      { return (i+1)*50 + 22;})
    .attr("fill", "black")
       
 }

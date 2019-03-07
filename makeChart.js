@@ -71,7 +71,7 @@ var drawChart = function(data)
     .attr("width", boxWidth)
     .attr("height", boxWidth-3)
     .attr("fill", function(d)
-      { return d.color;})
+      { return d.Color;})
 
 svg.selectAll("text")
    .data(data)

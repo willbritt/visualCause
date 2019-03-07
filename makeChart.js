@@ -31,6 +31,20 @@ var drawChart = function(data)
       { return d.W*10;})
      .attr("fill", function(d)
       { return d.Color;})
+  
+  svg.selectAll("text")
+   .data(data)
+   .enter()
+   .append("text")
+   .text(function(d)
+      { return d.W;})
+   .attr("x", function(d,i)
+      { return (i * barWidth) + 20;})
+   .attr("y", function(d)
+      { return height - (d.num*10)+15;})
+   .attr("fill", function(d) 
+      {return "white";})
+   .attr("font-weight", "bold")
       
 }
       

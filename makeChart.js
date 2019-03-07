@@ -15,7 +15,8 @@ var drawChart = function(Data)
   var width = 400;
   var height = 200;
   var barWidth = width/data.length;
-  var svg = d3.select("svg")
+  var svg = d3.select("body")
+              .append("svg")
               .attr("height", height)
               .attr("width", width);
   svg.selectAll("rect")
@@ -27,9 +28,9 @@ var drawChart = function(Data)
      .attr("y", function (d)
       { return height - d.w*20;})
      .attr("width", barWidth)
-    .attr("height", function(d)
+     .attr("height", function(d)
       { return d.w*20;})
-    .attr("fill", function(d)
+     .attr("fill", function(d)
       { return d.color;})
       
 }

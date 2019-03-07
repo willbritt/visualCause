@@ -3,7 +3,7 @@ var dataP = d3.csv("wc_standings.csv");
 dataP.then(function(data)
 {
   console.log("data",data);
-  drawChart(dataName, "#CSV"); 
+  drawChart(data, "#CSV"); 
 },
 function(err)
 {
